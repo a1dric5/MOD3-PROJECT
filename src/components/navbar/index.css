@@ -1,0 +1,91 @@
+/* Navbar Container */
+.header__middle {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+  
+  /* Logo */
+  .header__middle__logo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  /* Navbar */
+  .header__middle__navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar__button {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Navbar Menu */
+  .main-navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin: 0 10px;
+  }
+  
+  .navbar-item a {
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-item a:hover {
+    color: #ff5500;
+  }
+  
+  .navbar-item.sub__navbar__arrows > a::after {
+    content: '';
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+  }
+  
+  .sub__navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+  }
+  
+  .sub__navbar.sub__navbar__Active {
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .sub__navbar li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sub__navbar li a {
+    display: block;
+    padding: 5px 0;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .sub__navbar li a:hover {
+    color: #ff5500;
+  }
+  
+  /* Active Link */
+  .is-active {
+    color: #ff5500 !important;
+  }
+  

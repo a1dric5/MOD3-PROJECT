@@ -1,36 +1,60 @@
 import React,{ useState } from 'react';
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import './App.css';
 
-import About from './src/pages/about';
-// import ApplicationForm from './pages/applicationform';
-import Contact from './src/pages/contact';
+import Home from '../src/pages/home';
+import About from '../src/pages/about';
+import Contact from '../src/pages/contact';
+
+import ApplicationForm from './components/applicationform';
 import Navbar from './components/navbar';
-// import SummerCamp from './components/SummerCamp';
-// import CareerAdvice from './components/CareerAdvice';
+import SummerCamp from './components/summercamp';
+import CareerAdvice from './components/careeradvice';
+import Footer from './components/footer';
+
+// import SubscriptionPage from './components/subscription';
+
+import Carousel from './components/carousel';
+// import HeroImage from './componentst/heroimage';
+import Testimonials from './components/testimonials';
+import Services from './components/services';
+import Subscription from './components/subscription';
+import TeacherCarousel from './components/teachercarousel';
+import BlogArticles from './components/blogarticles';
 
 function App() {
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div>
-      <Router basename="/">
-
+      
+      <Navbar setOpen={setOpen} />
+      <Routes>
         {/* Add Menu Component */}
-        <Navbar setOpen={setOpen} />
         
-        <Switch> 
-          <Route exact path="/" component={About}/>
-          {/* <Route path="/ApplicationForm" render={() => <ApplicationForm open={open} setOpen={setOpen} />}/>
-          <Route path="/SummerCamp" component={SummerCamp}/>
-          <Route path="/CareerAdvice" component={CareerAdvice}/> */}
-          <Route path="/Contact" component={Contact}/>
+       
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/About" element={<About/>}/>
+          <Route path="/Application Form" render={() => <ApplicationForm open={open} setOpen={setOpen} />}/>
+          <Route path="/Summer Camp" element={<SummerCamp/>}/>
+          <Route path="/Career Advice" element={<CareerAdvice/>}/>
+          <Route path="/Contact" element={<Contact/>}/>
 
-          
-        </Switch>
-      </Router>
+          {/* <Route exact path="/Subscription" component={SubscriptionPage} /> */}
+      </Routes>
+
+      <Carousel />
+      {/* <HeroImage /> */}
+      <Testimonials />
+      <Services />
+      <Subscription />
+      <TeacherCarousel />
+      <BlogArticles />
+
+      <Footer />
 
     </div>
   );
 }
 
 export default App;
+
