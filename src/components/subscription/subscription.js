@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './subscription.css';
 
 const SubscriptionPage = () => {
   const history = useNavigate();

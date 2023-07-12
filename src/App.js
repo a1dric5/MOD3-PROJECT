@@ -1,60 +1,27 @@
-import React,{ useState } from 'react';
-import {Routes, Route} from "react-router-dom";
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-
-import Home from '../src/pages/home';
-import About from '../src/pages/about';
-import Contact from '../src/pages/contact';
-
-import ApplicationForm from './components/applicationform';
-import Navbar from './components/navbar';
-import SummerCamp from './components/summercamp';
-import CareerAdvice from './components/careeradvice';
-import Footer from './components/footer';
-
-// import SubscriptionPage from './components/subscription';
-
-import Carousel from './components/carousel';
-// import HeroImage from './componentst/heroimage';
-import Testimonials from './components/testimonials';
-import Services from './components/services';
-import Subscription from './components/subscription';
-import TeacherCarousel from './components/teachercarousel';
-import BlogArticles from './components/blogarticles';
+import Navbar from './components/navbar/navbar';
+import Footer from './components/footer/footer';
+import Home from '../src/pages/home/home';
+import AboutPage from './pages/about/about';
+import ContactPage from './pages/contact/contact';
 
 function App() {
-  const [open, setOpen] = useState(false);
   return (
     <div>
-      
-      <Navbar setOpen={setOpen} />
+      <Navbar />
       <Routes>
-        {/* Add Menu Component */}
-        
-       
-          <Route exact path="/" element={<Home/>}/>
-          <Route path="/About" element={<About/>}/>
-          <Route path="/Application Form" render={() => <ApplicationForm open={open} setOpen={setOpen} />}/>
-          <Route path="/Summer Camp" element={<SummerCamp/>}/>
-          <Route path="/Career Advice" element={<CareerAdvice/>}/>
-          <Route path="/Contact" element={<Contact/>}/>
-
-          {/* <Route exact path="/Subscription" component={SubscriptionPage} /> */}
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<AboutPage />} />
+        <Route path="/Contact" element={<ContactPage />} />
       </Routes>
-
-      <Carousel />
-      {/* <HeroImage /> */}
-      <Testimonials />
-      <Services />
-      <Subscription />
-      <TeacherCarousel />
-      <BlogArticles />
-
       <Footer />
-
     </div>
   );
 }
 
 export default App;
+
+
 

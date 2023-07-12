@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FiXCircle, FiAlignRight, FiChevronDown } from 'react-icons/fi';
-import './index.css';
+import './navbar.css';
 
 const Navbar = ({ setOpen }) => {
   const [navbar, setNavbar] = useState(false);
@@ -39,10 +39,10 @@ const Navbar = ({ setOpen }) => {
 
           {/* Add Logo */}
           <div className="header__middle__logo">
-            {/* Replace the below NavLink with your logo */}
-            {/* <NavLink exact activeClassName='is-active' to="/">
+            {/* Replace the below Link with your logo */}
+            {/* <Link exact to="/">
               <img src={logo} alt="logo" />
-            </NavLink> */}
+            </Link> */}
           </div>
 
           <div className="header__middle__navbar">
@@ -62,24 +62,24 @@ const Navbar = ({ setOpen }) => {
               <ul className={boxClass.join(' ')}>
 
                 <li className="navbar-item">
-                  <NavLink onClick={handleClick} activeClassName='is-active' to="/ApplicationForm"> Application Form </NavLink>
+                  <Link onClick={handleClick} to="/ApplicationForm"> Application Form </Link>
                 </li>
                 <li onClick={toggleSubmenu} className="navbar-item sub__navbar__arrows">
                   <Link to="#"> Service <FiChevronDown /> </Link>
                   <ul className={boxClassSubMenu.join(' ')}>
                     <li>
-                      <NavLink onClick={toggleClass} activeClassName='is-active' to="/SummerCamp"> Summer Camp </NavLink>
+                      <Link onClick={toggleClass} to="/SummerCamp"> Summer Camp </Link>
                     </li>
                     <li>
-                      <NavLink onClick={toggleClass} activeClassName='is-active' to="/CareerAdvice"> Career Advice </NavLink>
+                      <Link onClick={toggleClass} to="/CareerAdvice"> Career Advice </Link>
                     </li>
                   </ul>
                 </li>
                 <li className="navbar-item">
-                  <NavLink exact activeClassName='is-active' onClick={toggleClass} to="/"> About </NavLink>
+                  <Link onClick={toggleClass} to="/About"> About </Link>
                 </li>
                 <li className="navbar-item">
-                  <NavLink onClick={toggleClass} activeClassName='is-active' to="/Contact"> Contact </NavLink>
+                  <Link onClick={toggleClass} to="/Contact"> Contact </Link>
                 </li>
 
               </ul>
