@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiXCircle, FiAlignRight, FiChevronDown } from 'react-icons/fi';
 import './navbar.css';
+// import logo from '../assets/pathpluslogo.png'; // Import the logo image
+
 
 const Navbar = ({ setOpen }) => {
   const [navbar, setNavbar] = useState(false);
@@ -38,11 +40,10 @@ const Navbar = ({ setOpen }) => {
         <div className="row">
 
           {/* Add Logo */}
-          <div className="header__middle__logo">
-            {/* Replace the below Link with your logo */}
-            {/* <Link exact to="/">
-              <img src={logo} alt="logo" />
-            </Link> */}
+          <div className="text-logo">
+              <Link to="/Home">
+              <h1>Path PLUS</h1>
+            </Link>  
           </div>
 
           <div className="header__middle__navbar">
@@ -92,3 +93,4 @@ const Navbar = ({ setOpen }) => {
 };
 
 export default Navbar;
+

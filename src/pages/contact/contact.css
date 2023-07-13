@@ -8,9 +8,9 @@ body {
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 32px;
   background-color: #ffffff;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,7 +46,7 @@ label {
 
 input,
 textarea {
-  width: 100%;
+  width: 95%;
   padding: 12px;
   font-size: 16px;
   border: 1px solid #cccccc;
@@ -137,3 +137,75 @@ button {
 button:hover {
   background-color: var(--color-secondary);
 }
+
+/* Additional Styles for Contact Page */
+.contact-page {
+  display: flex;
+  border-radius: 16px;
+  overflow: hidden;
+  
+}
+
+.left-side {
+  flex: 1;
+  padding: 24px;
+  background-color: #ff9933;
+}
+
+.right-side {
+  flex: 1;
+  padding-left: 24px;
+}
+
+.left-side h1 {
+  text-align: center;
+  color: #ffffff;
+}
+
+
+.left-side p {
+  margin-top: 40px;
+  color:#ffffff;
+}
+
+.left-side .prompt1,
+.left-side .prompt2,
+.left-side .prompt3 {
+  margin-bottom: 20px;
+}
+
+.prompt1,
+.prompt2,
+.prompt3 {
+  display: flex;
+  align-items: center;
+}
+
+.prompt1 svg,
+.prompt2 svg,
+.prompt3 svg {
+  margin-right: 10px;
+}
+
+
+.right-side h2 {
+  text-align: center;
+}
+
+.right-side .contact-info {
+  margin-top: 40px;
+}
+
+.right-side .contact-info p {
+  margin-bottom: 10px;
+}
+
+.right-side .contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.right-side .contact-info a:hover {
+  color: #0056b3;
+}
+
